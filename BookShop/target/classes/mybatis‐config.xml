@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 이 xml 안에 쓸 수 있는 태그들을 dtd안에 지정을 해두었다 -->
+<!-- 이 xml 안에서는 configuration태그로만 시작할 수 있다 -->
+<configuration>
+	<typeAliases>
+		<typeAlias type="kr.ac.kopo.bookshop.model.Book" alias="Book"/>
+		<!-- type="kr.ac.kopo.bookshop.model.Book" 큐네임이라고 한다 -->
+		<typeAlias type="kr.ac.kopo.bookshop.model.Customer" alias="Customer"/>
+		<typeAlias type="kr.ac.kopo.bookshop.model.Review" alias="Review"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mybatis/book.xml" />
+		<mapper resource="mybatis/customer.xml" />
+		<mapper resource="mybatis/review.xml" />
+	</mappers>
+</configuration>
